@@ -1140,13 +1140,13 @@ header .container .mega-menu ul.links li:hover a i {
 .our-skills .container .skills .skill {
     margin-block: 35px;
 }
-.our-skills .container .skills .skill h3 {
+.our-skills .container .skills .skill h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
 }
-.our-skills .container .skills .skill h3 span {
+.our-skills .container .skills .skill h2 span {
     padding: 2.5px 5px;
     color: var(--main-color);
     font-size: 12px;
