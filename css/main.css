@@ -87,24 +87,23 @@ ul {
 }
 .main-heading {
     width: fit-content;
-    position: relative;
     margin: 0 auto 80px;
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
+    position: relative;
     border: 2px solid rgb(0, 0, 0);
+    text-transform: uppercase;
     z-index: 1;
     transition: var(--main-transition);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
-    transition-delay: 0.05s;
 }
 .main-heading:hover {
     color: rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    transition-delay: 0.5s;
 }
 .main-heading::before,
 .main-heading::after {
@@ -114,17 +113,11 @@ ul {
     width: 14px;
     height: 14px;
     background-color: var(--main-color);
-    z-index: -1;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -138,12 +131,14 @@ ul {
     right: -30px;
 }
 .main-heading:hover::before {
-    animation: moving-left var(--main-transition) linear forwards;
-    -webkit-animation: moving-left var(--main-transition) linear forwards;
+    animation: moving-left 0.5s linear forwards;
+    -webkit-animation: moving-left 0.5s linear forwards;
+    z-index: -1;
 }
 .main-heading:hover::after {
-    animation: moving-right var(--main-transition) linear forwards;
-    -webkit-animation: moving-right var(--main-transition) linear forwards;
+    animation: moving-right 0.5s linear forwards;
+    -webkit-animation: moving-right 0.5s linear forwards;
+    z-index: -1;
 }
 .spikes {
     position: relative;
@@ -1582,7 +1577,7 @@ header .container .mega-menu ul.links li:hover a i {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
-.pricing .container .box a:hover {
+.pricing .container .box:hover a {
     background-color: var(--main-color-alt);
     border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
