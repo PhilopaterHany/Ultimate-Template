@@ -389,6 +389,7 @@ header .container .mega-menu.show {
     z-index: 99;
 }
 header .container .mega-menu .image img {
+    width: 315px;
     max-width: 100%;
 }
 header .container .mega-menu ul.links {
