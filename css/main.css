@@ -1143,7 +1143,7 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .our-skills .container .skills .skill h2 span {
     padding: 3px 6px;
-    color: var(--main-color);
+    color: rgb(20, 85, 135);
     font-size: 12px;
     border: 1px solid var(--grey);
     border-radius: 5px;
@@ -1159,7 +1159,7 @@ header .container .mega-menu ul.links li:hover a i {
 .our-skills .container .skills .the-progress span {
     display: block;
     height: 100%;
-    background-color: rgb(21, 85, 137);
+    background-color: rgb(20, 85, 135);
     transition: calc(var(--main-transition) * 2);
     -webkit-transition: calc(var(--main-transition) * 2);
     -moz-transition: calc(var(--main-transition) * 2);
@@ -1377,7 +1377,7 @@ header .container .mega-menu ul.links li:hover a i {
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    background-color: var(--main-color);
+    background-color: rgb(7, 90, 155);
     cursor: pointer;
     border-radius: 50px;
     -webkit-border-radius: 50px;
