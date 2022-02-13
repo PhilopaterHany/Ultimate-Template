@@ -1154,12 +1154,12 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .our-skills .container .skills .the-progress {
     height: 30px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(245, 245, 245);
 }
 .our-skills .container .skills .the-progress span {
     display: block;
     height: 100%;
-    background-color: var(--main-color);
+    background-color: rgb(21, 85, 137);
     transition: calc(var(--main-transition) * 2);
     -webkit-transition: calc(var(--main-transition) * 2);
     -moz-transition: calc(var(--main-transition) * 2);
@@ -1331,7 +1331,7 @@ header .container .mega-menu ul.links li:hover a i {
     text-align: center;
     line-height: var(--main-line-height);
     font-size: 18px;
-    color: var(--grey);
+    color: rgb(89, 89, 89);
 }
 .events .container .subscribe {
     width: 100%;
@@ -1607,9 +1607,10 @@ header .container .mega-menu ul.links li:hover a i {
 .videos .container .holder .list .name {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(244, 244, 244);
-    color: var(--main-color);
     padding: 20px;
+    font-weight: bold;
+    color: rgb(6, 84, 147);
+    background-color: rgb(244, 244, 244);
 }
 .videos .container .holder .list ul li {
     padding: 15px;
@@ -1623,8 +1624,9 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .videos .container .holder .list ul li:hover,
 .videos .container .holder .list ul li.active {
+    font-weight: bold;
+    color: rgb(6, 84, 147);
     background-color: rgb(244, 244, 244);
-    color: var(--main-color);
 }
 .videos .container .holder .list ul li span {
     display: block;
