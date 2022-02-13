@@ -1631,7 +1631,7 @@ header .container .mega-menu ul.links li:hover a i {
 .videos .container .holder .list ul li span {
     display: block;
     margin-top: 10px;
-    color: var(--grey);
+    color: rgb(89, 89, 89);
 }
 .videos .container .holder .preview {
     display: flex;
