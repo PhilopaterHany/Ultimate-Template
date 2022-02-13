@@ -1614,6 +1614,7 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .videos .container .holder .list ul li {
     padding: 15px;
+    font-weight: bold;
     border-top: 1px solid var(--section-background);
     cursor: pointer;
     transition: var(--main-transition);
@@ -1624,7 +1625,6 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .videos .container .holder .list ul li:hover,
 .videos .container .holder .list ul li.active {
-    font-weight: bold;
     color: rgb(6, 84, 147);
     background-color: rgb(244, 244, 244);
 }
