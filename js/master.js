@@ -137,10 +137,6 @@ window.addEventListener("scroll", () => {
         for (let i = 0; i < progressBars.length; i++) {
             progressBars[i].style.width = progressBars[i].dataset.width;
         }
-    } else {
-        for (let i = 0; i < progressBars.length; i++) {
-            progressBars[i].style.width = 0;
-        }
     }
 });
 
