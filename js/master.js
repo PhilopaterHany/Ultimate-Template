@@ -149,7 +149,7 @@ for (let i = 0; i < workBoxes.length; i++) {
 }
 
 // Events Section Counter
-const countDownDate = new Date("May 28, 2022 23:59:59").getTime();
+const countDownDate = new Date("Aug 4, 2022 23:59:59").getTime();
 const daysSpan = document.querySelector(
     ".events .container .info .time .unit span.days"
 );
