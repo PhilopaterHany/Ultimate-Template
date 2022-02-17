@@ -149,7 +149,7 @@ for (let i = 0; i < workBoxes.length; i++) {
 }
 
 // Events Section Counter
-const countDownDate = new Date("May 21, 2022 23:59:59").getTime();
+const countDownDate = new Date("May 28, 2022 23:59:59").getTime();
 const daysSpan = document.querySelector(
     ".events .container .info .time .unit span.days"
 );
@@ -214,6 +214,43 @@ window.addEventListener("scroll", () => {
         pricingStarted = true;
     }
 });
+
+// Our Work Section Filter & Animation
+const ourWorkLis = document.querySelectorAll(
+    ".our-work .container ul.categ li"
+);
+const ourWorkBoxes = document.querySelectorAll(".our-work .imgprev .box");
+const ourWorkImages = document.querySelectorAll(".our-work .box img");
+ourWorkImages.forEach((img) => {
+    img.nextElementSibling.lastElementChild.innerHTML =
+        img.classList[1][0].toUpperCase() + img.classList[1].slice(1);
+});
+ourWorkLis.forEach((li) => {
+    li.addEventListener("click", () => {
+        ourWorkLis.forEach((li) => {
+            li.classList.remove("active");
+            ourWorkImages.forEach((img) => {
+                img.parentElement.style.display = "none";
+            });
+        });
+        document.querySelectorAll(li.dataset.work).forEach((img) => {
+            img.parentElement.style.display = "inline-block";
+        });
+        li.classList.add("active");
+    });
+});
+for (let i = 0; i < ourWorkBoxes.length; i += 2) {
+    ourWorkBoxes[i].classList.add(
+        "wow",
+        "animate__animated",
+        "animate__flipInX"
+    );
+    ourWorkBoxes[i + 1].classList.add(
+        "wow",
+        "animate__animated",
+        "animate__flipInY"
+    );
+}
 
 // Statistics Section Counter & Animation
 const numbersBoxes = Array.from(
