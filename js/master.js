@@ -149,8 +149,6 @@ for (let i = 0; i < workBoxes.length; i++) {
 }
 
 // Events Section Counter
-const currYear = new Date().getFullYear();
-const countDownDate = new Date(`Aug 4, ${currYear} 00:00:01`).getTime();
 const daysSpan = document.querySelector(
     ".events .container .info .time .unit span.days"
 );
@@ -163,22 +161,25 @@ const minutesSpan = document.querySelector(
 const secondsSpan = document.querySelector(
     ".events .container .info .time .unit span.seconds"
 );
-const counter = setInterval(() => {
-    const dateNow = new Date().getTime();
-    const dateDiff = countDownDate - dateNow;
-    const days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
+const currDate = new Date();
+let countDownDate = new Date(`Aug 4, ${currDate.getFullYear()} 00:00:01`);
+const timer = setInterval(() => {
+    let dateDiff = countDownDate.getTime() - new Date().getTime();
+    if (dateDiff <= 0) {
+        countDownDate = new Date(
+            `Aug 4, ${currDate.getFullYear() + 1} 00:00:01`
+        );
+    }
+    let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
         (dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    const minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
+    let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
     daysSpan.innerHTML = days < 10 ? `0${days}` : days;
     hoursSpan.innerHTML = hours < 10 ? `0${hours}` : hours;
     minutesSpan.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
     secondsSpan.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
-    if (dateDiff < 0) {
-        clearInterval(counter);
-    }
 }, 1000);
 
 // Counting Function
@@ -295,4 +296,4 @@ document
     });
 
 // Putting Year at Footer
-document.querySelector("footer .year").innerHTML = currYear;
+document.querySelector("footer .year").innerHTML = currDate.getFullYear();
