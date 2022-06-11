@@ -149,7 +149,8 @@ for (let i = 0; i < workBoxes.length; i++) {
 }
 
 // Events Section Counter
-const countDownDate = new Date("Aug 4, 2022 23:59:59").getTime();
+const currYear = new Date().getFullYear();
+const countDownDate = new Date(`Aug 4, ${currYear} 00:00:01`).getTime();
 const daysSpan = document.querySelector(
     ".events .container .info .time .unit span.days"
 );
@@ -294,4 +295,4 @@ document
     });
 
 // Putting Year at Footer
-document.querySelector("footer .year").innerHTML = new Date().getFullYear();
+document.querySelector("footer .year").innerHTML = currYear;
