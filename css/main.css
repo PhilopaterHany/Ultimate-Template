@@ -466,25 +466,9 @@ header .container .mega-menu ul.links li:hover a i {
     background-color: var(--main-color-alt);
 }
 .wave {
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-}
-.wave svg {
     position: relative;
-    display: block;
-    width: calc(109% + 1.3px);
-    height: 200px;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-.wave .shape-fill {
-    fill: var(--main-color-alt);
+    bottom: 100px;
+    z-index: -1;
 }
 .landing .container {
     height: calc(100vh - 252px);
@@ -508,8 +492,11 @@ header .container .mega-menu ul.links li:hover a i {
     line-height: 1.7;
 }
 .landing .container .image img {
-    position: relative;
     width: 350px;
+    position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
     -webkit-animation: 2.5s linear 0s infinite normal none running up-down;
     animation: 2.5s linear 0s infinite normal none running up-down;
 }
