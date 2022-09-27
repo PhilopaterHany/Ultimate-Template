@@ -90,6 +90,7 @@ ul {
     margin: 0 auto 80px;
     padding: 10px 20px;
     font-size: 30px;
+    font-weight: normal;
     position: relative;
     border: 2px solid rgb(0, 0, 0);
     text-transform: uppercase;
@@ -139,6 +140,11 @@ ul {
     z-index: -1;
     -webkit-animation: moving-right 0.5s linear forwards;
     animation: moving-right 0.5s linear forwards;
+}
+@media (max-width: 767px) {
+    .main-heading {
+        font-size: 26px;
+    }
 }
 .spikes {
     position: relative;
@@ -558,11 +564,6 @@ header .container .mega-menu ul.links li:hover a i {
 .articles {
     padding-block: var(--main-padding);
 }
-@media (min-width: 992px) {
-    .articles .main-heading {
-        margin-top: 150px;
-    }
-}
 .articles .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -620,6 +621,11 @@ header .container .mega-menu ul.links li:hover a i {
     -webkit-animation: moving-arrow calc(var(--main-transition) * 2) linear
         infinite;
     animation: moving-arrow calc(var(--main-transition) * 2) linear infinite;
+}
+@media (min-width: 992px) {
+    .articles {
+        padding-top: 0;
+    }
 }
 /** End Articles */
 /*& Start Gallery */
@@ -835,7 +841,7 @@ header .container .mega-menu ul.links li:hover a i {
 .testimonials .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 60px 30px;
 }
 .testimonials .container .box {
     position: relative;
@@ -879,6 +885,26 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .testimonials .container .box .rating .filled {
     color: rgb(255 193 7);
+}
+@media (max-width: 767px) {
+    .testimonials .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .testimonials .container .box img {
+        top: -50px;
+        right: 37%;
+    }
+    .testimonials .container .box h4 {
+        margin-top: 40px;
+    }
+    .testimonials .container .box h4,
+    .testimonials .container .box h6,
+    .testimonials .container .box .rating {
+        text-align: center;
+    }
+    .testimonials .container .box p {
+        margin-top: 20px;
+    }
 }
 /** End Testimonials */
 /*? Start Team Members */
@@ -1178,6 +1204,7 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .work .container .image img {
     max-width: 100%;
+    pointer-events: none;
 }
 .work .container .info .box {
     display: flex;
@@ -1263,6 +1290,7 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .events .container img {
     max-width: 450px;
+    pointer-events: none;
 }
 .events .container .info {
     flex: 1;
@@ -1316,7 +1344,7 @@ header .container .mega-menu ul.links li:hover a i {
 }
 .events .container .info .title {
     text-align: center;
-    margin-top: 40px;
+    margin-block: 40px 20px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -1910,6 +1938,7 @@ header .container .mega-menu ul.links li:hover a i {
 .discount .image img {
     width: 300px;
     max-width: 100%;
+    pointer-events: none;
 }
 .discount .main {
     display: flex;
@@ -2086,6 +2115,9 @@ footer .container .box .line .info {
     flex: 1;
     line-height: var(--main-line-height);
 }
+footer .container .box .line .info a {
+    color: rgb(185, 185, 185);
+}
 footer .container .footer-gallery img {
     margin: 2px;
     width: 78px;
@@ -2104,6 +2136,7 @@ footer .copyright p {
 footer .copyright p i {
     color: rgb(176, 0, 32);
 }
+footer .copyright .year,
 footer .copyright p a {
     color: var(--main-color);
 }

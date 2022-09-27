@@ -1,6 +1,6 @@
 // Typed.js For Landing Animation
 const typed = new Typed("#typed", {
-    strings: ["I'm Philopater Hany", "I'm A Front-End Developer", "Welcome To My World"],
+    strings: ["Welcome To My World", "I'm Philopater Hany", "I'm a Front-End Developer"],
     backSpeed: 200,
     typeSpeed: 100,
     loop: true,
@@ -93,8 +93,12 @@ const daysSpan = document.querySelector(".events .time .unit span.days");
 const hoursSpan = document.querySelector(".events .time .unit span.hours");
 const minutesSpan = document.querySelector(".events .time .unit span.minutes");
 const secondsSpan = document.querySelector(".events .time .unit span.seconds");
-const eventTitle = document.querySelector(".events .info .title");
+const myBdayAge = document.querySelector(".coming-bday-age");
+const myBdaySuffix = document.querySelector(".coming-bday-suffix");
 const currDate = new Date();
+let myComingBday = currDate.getFullYear() - 2005 + 1;
+let myComingBdayLastChar = myComingBday.toString()[myComingBday.toString().length - 1];
+
 let countDownDate = new Date(`Aug 4, ${currDate.getFullYear()} 00:00:01`);
 const timer = setInterval(() => {
     let dateDiff = countDownDate.getTime() - new Date().getTime();
@@ -110,7 +114,17 @@ const timer = setInterval(() => {
     minutesSpan.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
     secondsSpan.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }, 1000);
-eventTitle.innerHTML = `Tech Masters Event ${currDate.getFullYear()}`;
+
+myBdayAge.innerHTML = myComingBday.toString();
+if (myComingBdayLastChar === "1") {
+    myBdaySuffix.innerHTML = "st"
+} else if (myComingBdayLastChar === "2") {
+    myBdaySuffix.innerHTML = "nd";
+} else if (myComingBdayLastChar === "3") {
+    myBdaySuffix.innerHTML = "rd";
+} else {
+    myBdaySuffix.innerHTML = "th";
+}
 
 // Counting Function
 function startCount(element) {
@@ -183,12 +197,12 @@ window.addEventListener("scroll", () => {
 });
 
 // Number Input Characters
-document.querySelector(".discount .main form input[type='number']")
-    .addEventListener("keypress", function (event) {
-        if ((event.which != 8 && event.which != 0 && event.which < 48) || event.which > 57) {
-            event.preventDefault();
-        }
-    });
+const invalidChars = ["e", "+", "-"];
+document.getElementsByName("mobile")[0].addEventListener("keydown", function (e) {
+    if (invalidChars.includes(e.key)) {
+        e.preventDefault();
+    }
+});
 
 // Putting Year at Footer
 document.querySelector("footer .year").innerHTML = currDate.getFullYear();
