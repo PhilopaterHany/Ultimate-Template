@@ -321,9 +321,12 @@ header .container {
     flex-flow: row wrap;
     position: relative;
 }
+header .container .logo {
+    padding-block: 10px;
+}
 header .container .logo * {
     color: var(--main-color);
-    font-size: 30px;
+    font-size: 40px;
 }
 header .container .logo a {
     font-family: 'Elsie Swash Caps', serif;
@@ -2043,6 +2046,8 @@ footer .container {
 }
 footer .container .box h3 {
     margin: 0 0 20px;
+    font-family: 'Elsie Swash Caps', serif;
+    font-weight: 900;
     font-size: 50px;
 }
 footer .container .box .social {
