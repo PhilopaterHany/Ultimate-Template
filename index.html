@@ -29,7 +29,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Elsie+Swash+Caps:wght@400;900&display=swap"
         />
     </head>
     <body>
@@ -41,7 +41,9 @@
         <!--? Start Header -->
         <header id="header">
             <div class="container">
-                <a href="#" class="logo" name="logo">Philo</a>
+                <div class="logo">
+                    <a href="#" name="logo" id="typed">Philo</a>
+                </div>
                 <nav>
                     <ul>
                         <li>
@@ -142,7 +144,7 @@
         <section class="landing">
             <div class="container">
                 <div class="text">
-                    <span id="typed"></span>
+                    <h1>Welcome To My World!</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Reprehenderit.
@@ -1120,33 +1122,11 @@
                         <div class="name">
                             Top Videos <i class="fas fa-random"></i>
                         </div>
-                        <ul>
-                            <li>How To Create Sub Domain<span>05:18</span></li>
-                            <li>Playing With DNS<span>03:18</span></li>
-                            <li>
-                                Everything About The Virtual Hosts
-                                <span>05:25</span>
-                            </li>
-                            <li>
-                                How To Monitor Your Website<span>04:16</span>
-                            </li>
-                            <li>
-                                Uncharted Beating The Last Boss
-                                <span>07:48</span>
-                            </li>
-                            <li>
-                                Ys Oath In Felghana Overview<span>03:12</span>
-                            </li>
-                            <li>
-                                Ys Series All Games Ending<span>08:10</span>
-                            </li>
-                        </ul>
+                        <ul id="videos-list"></ul>
                     </div>
                     <div class="preview">
-                        <img src="images/video-preview.webp" alt="" />
-                        <div class="info">
-                            Everything About The Virtual Hosts
-                        </div>
+                        <div id="video-player"></div>
+                        <p class="video-title"></p>
                     </div>
                 </div>
             </div>
@@ -1410,11 +1390,8 @@
         <!--* End Footer -->
         <!--& JavaScript -->
         <script src="js/wow.min.js"></script>
-        <script>
-            // WOW.js Library
-            new WOW().init();
-        </script>
         <script src="js/typed.min.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="js/master.js"></script>
     </body>
 </html>
