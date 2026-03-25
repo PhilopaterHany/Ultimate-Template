@@ -106,7 +106,7 @@ const secondsSpan = document.querySelector(".events .time .unit span.seconds");
 const myBdayAge = document.querySelector(".coming-bday-age");
 const myBdaySuffix = document.querySelector(".coming-bday-suffix");
 const currDate = new Date();
-let myComingBday = currDate.getFullYear() - 2005 + 1;
+let myComingBday = currDate.getFullYear() - 2005;
 let myComingBdayLastChar = myComingBday.toString()[myComingBday.toString().length - 1];
 let countDownDate = new Date(`Aug 4, ${currDate.getFullYear()} 00:00:01`);
 
